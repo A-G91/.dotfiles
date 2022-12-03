@@ -38,8 +38,6 @@ vim.opt.updatetime = 50
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
 
-vim.g.mapleader = " "
-
 -- open splits intuitively
 vim.opt.splitbelow = true
 vim.opt.splitright = true
