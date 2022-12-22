@@ -9,9 +9,9 @@ local ensure_packer = function()
     return false
 end
 
-  local packer_bootstrap = ensure_packer()
-  
-  return require('packer').startup(function(use)
+local packer_bootstrap = ensure_packer()
+
+return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- UI
@@ -23,23 +23,23 @@ end
     use 'nvim-tree/nvim-web-devicons'
 
     use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- Treesitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     -- LSP Config
-	use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-	use 'L3MON4D3/LuaSnip' -- Snippets plugin
-  
+    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+    use 'L3MON4D3/LuaSnip' -- Snippets plugin
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
-      require('packer').sync()
+        require('packer').sync()
     end
-  end)
+end)
