@@ -9,3 +9,6 @@
     a) rustup component add rust-analyzer
     b) rustup which --toolchain stable rust-analyzer
     c) get path from b) and symlink into ~/.cargo/bin
+
+ 4) Install ripgrep which is needed to search files for a string
+    https://github.com/BurntSushi/ripgrep#installation
