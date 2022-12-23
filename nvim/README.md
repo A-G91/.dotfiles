@@ -6,3 +6,6 @@
     (i.e: MacOS Terminal.app does not support it so colors look off)
 
  3) For rust, get the path of the the rust-analyzer and symlink it to cargo/bin so it is in the path. (this is assuming cargo/bin is in the path already)
+    a) rustup component add rust-analyzer
+    b) rustup which --toolchain stable rust-analyzer
+    c) get path from b) and symlink into ~/.cargo/bin
