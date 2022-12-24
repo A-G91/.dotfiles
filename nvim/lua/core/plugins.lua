@@ -37,8 +37,14 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
-    -- Rust (needed to replace the outdated plugin that is included by default)
+    -- Rust (needed to replace the outdated plugin that is included by default, which was causing issue when running :RustFmt)
     use 'rust-lang/rust.vim'
+
+    -- Autopair support
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require('nvim-autopairs').setup {} end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
