@@ -1,6 +1,7 @@
 vim.g.mapleader = ' '
 
 vim.opt.nu = true
+
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -23,7 +24,9 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.isfname:append("@-@")
 
+
 vim.opt.updatetime = 50
+
 
 vim.opt.mouse = 'a'
 vim.opt.clipboard = 'unnamedplus'
