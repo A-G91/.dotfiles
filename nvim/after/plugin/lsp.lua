@@ -96,3 +96,13 @@ lspconfig['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
+
+lspconfig['pyright'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    -- Server-specific settings...
+    settings = {
+      ["pyright"] = {}
+    }
+}
