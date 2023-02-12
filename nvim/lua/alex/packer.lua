@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- UI
-    use 'cocopon/iceberg.vim'
+    use 'rmehri01/onenord.nvim'
 
     use 'nvim-lualine/lualine.nvim'
 

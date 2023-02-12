@@ -1,2 +1,2 @@
 vim.o.termguicolors = true
-vim.cmd [[ colorscheme iceberg ]]
+vim.cmd [[ colorscheme onenord ]]
