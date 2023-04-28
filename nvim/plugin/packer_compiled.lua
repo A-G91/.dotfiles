@@ -49,13 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-<<<<<<< HEAD
 local package_path_str = "/home/alex/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/alex/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/alex/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/alex/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/home/alex/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
-=======
-local package_path_str = "/Users/alexgrekulovic/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/alexgrekulovic/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/alexgrekulovic/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/alexgrekulovic/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/alexgrekulovic/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -81,11 +76,7 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/LuaSnip",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/LuaSnip",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["cmp-buffer"] = {
@@ -95,119 +86,67 @@ _G.packer_plugins = {
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   cmp_luasnip = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["lualine.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/lualine.nvim",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/nvim-cmp",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onenord.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/onenord.nvim",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/onenord.nvim",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/rmehri01/onenord.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/packer.nvim",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/packer.nvim",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/plenary.nvim",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-=======
-    path = "/Users/alexgrekulovic/.local/share/nvim/site/pack/packer/start/telescope.nvim",
->>>>>>> b6423419c1b5f98fa7251e456d7c28b9f13dca88
     url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
