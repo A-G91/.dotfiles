@@ -30,10 +30,10 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   
   { -- Theme
-    'kadekillary/skull-vim',
+    'Mofiqul/adwaita.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'skull'
+      vim.cmd.colorscheme 'adwaita'
     end,
   },
 
@@ -48,6 +48,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
+        theme = "adwaita",
         component_separators = '|',
         section_separators = '',
       },
