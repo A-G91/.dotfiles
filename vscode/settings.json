@@ -1,1 +1,23 @@
-/Users/alex/Library/Application Support/Code/User/settings.json
+{
+    "workbench.colorTheme": "One Dark Teal",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontSize": 16,
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "FiraCode NF",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "excalidraw.theme": "dark",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.bracketPairColorization.enabled": false,
+    "editor.codeLensFontFamily": "FiraCode NF",
+    "editor.colorDecorators": false,
+    "editor.minimap.enabled": false,
+    "workbench.preferredDarkColorTheme": "One Dark Teal",
+    "breadcrumbs.enabled": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "zenMode.hideLineNumbers": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable"
+}
