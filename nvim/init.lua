@@ -30,16 +30,16 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   
   { -- Theme
-    'Mofiqul/adwaita.nvim',
+    'p00f/alabaster.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'adwaita'
+      vim.cmd.colorscheme 'alabaster'
     end,
   },
 
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-buffer' },
   },
 
   { -- Set lualine as statusline
@@ -48,7 +48,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = "adwaita",
+        theme = "alabaster",
         component_separators = '|',
         section_separators = '',
       },
@@ -102,6 +102,8 @@ vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
+
+vim.opt.swapfile = false
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
