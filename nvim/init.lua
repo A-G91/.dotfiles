@@ -55,8 +55,8 @@ require('lazy').setup({
       },
     },
   },
-
-  {
+  
+  { -- LSP plugin
     'neovim/nvim-lspconfig'
   },
 
