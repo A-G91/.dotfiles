@@ -348,7 +348,7 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
-    { name = 'nvim_lsp' },
+    { name = 'nvim_lsp', max_item_count = 4 },
     { name = 'luasnip' },
     { name = 'buffer', keyword_length = 2 },
   },
