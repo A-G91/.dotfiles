@@ -30,12 +30,12 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   
   { -- Theme
-    'p00f/alabaster.nvim',
-    -- 'flrnd/plastic.vim',
-    -- 'blazkowolf/gruber-darker.nvim',
+    -- 'p00f/alabaster.nvim',
+    'sainnhe/everforest',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'alabaster'
+      vim.g.everforest_background = 'hard'
+      vim.cmd.colorscheme 'everforest'
     end,
   },
 
