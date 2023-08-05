@@ -26,7 +26,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.stickyScroll.enabled": true,
     "editor.hover.sticky": true,
