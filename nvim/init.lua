@@ -132,6 +132,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
@@ -159,10 +162,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
+local actions = require("telescope.actions")
 require('telescope').setup {
   defaults = {
     mappings = {
       i = {
+        ['<C-e>'] = actions.select_vertical,
         ['<C-u>'] = false,
         ['<C-d>'] = false,
       },
