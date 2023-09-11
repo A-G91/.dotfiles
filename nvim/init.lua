@@ -31,11 +31,11 @@ require('lazy').setup({
   
   { -- Theme
     -- 'p00f/alabaster.nvim',
-    'sainnhe/everforest',
+    -- 'sainnhe/everforest',
+    'aktersnurra/no-clown-fiesta.nvim',
     priority = 1000,
     config = function()
-      vim.g.everforest_background = 'hard'
-      vim.cmd.colorscheme 'everforest'
+      vim.cmd.colorscheme 'no-clown-fiesta'
     end,
   },
 
