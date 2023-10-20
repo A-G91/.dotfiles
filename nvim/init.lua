@@ -27,12 +27,7 @@ require('lazy').setup({
   --  The configuration is done below. Search for lspconfig to find it below.
   {
     -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim'
-    },
+    'neovim/nvim-lspconfig'
   },
 
   {
@@ -48,11 +43,15 @@ require('lazy').setup({
   { 'folke/which-key.nvim',  opts = {} },
 
   {
-    -- Theme inspired by Atom
-    'morhetz/gruvbox',
+    'mcchrish/zenbones.nvim',
+    dependencies = {
+      'rktjmp/lush.nvim'
+    },
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'gruvbox'
+      vim.g.zenbones_italic_comments = false
+      vim.g.zenbones_lightness = dim
+      vim.cmd.colorscheme 'zenbones'
     end,
   },
 
@@ -63,23 +62,23 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'gruvbox',
+        theme = 'zenbones',
         component_separators = '|',
         section_separators = '',
       },
     },
   },
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
-  },
+  -- {
+  --   -- Add indentation guides even on blank lines
+  --   'lukas-reineke/indent-blankline.nvim',
+  --   -- Enable `lukas-reineke/indent-blankline.nvim`
+  --   -- See `:help indent_blankline.txt`
+  --   opts = {
+  --     char = '┊',
+  --     show_trailing_blankline_indent = false,
+  --   },
+  -- },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
@@ -114,6 +113,9 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 }, {})
+
+-- Use light variant of theme installed
+vim.opt.background="light"
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -356,39 +358,24 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 end
 
--- Enable the following language servers
-local servers = {
-  gopls = {},
-  -- pyright = {},
-  lua_ls = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
-}
-
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = false
 
--- Ensure the servers above are installed
-local mason_lspconfig = require 'mason-lspconfig'
 
-mason_lspconfig.setup {
-  ensure_installed = vim.tbl_keys(servers),
+local lspconfig = require('lspconfig')
+lspconfig.pyright.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
 }
-
-mason_lspconfig.setup_handlers {
-  function(server_name)
-    require('lspconfig')[server_name].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-      filetypes = (servers[server_name] or {}).filetypes,
-    }
-  end
+lspconfig.gopls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+lspconfig.rust_analyzer.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
 }
 
 -- [[ Configure nvim-cmp ]]
