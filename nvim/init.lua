@@ -185,6 +185,10 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-q>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>', '<C-w>l', { noremap = true, silent = true })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
