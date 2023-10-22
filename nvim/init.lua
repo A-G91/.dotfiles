@@ -311,7 +311,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
   -- to define small helper and utility functions so you don't have to repeat yourself
@@ -345,7 +345,9 @@ local on_attach = function(_, bufnr)
             end
           end
         end
-        vim.lsp.buf.format({async = false})
+        if client.supports_method("textDocument/formatting") then
+          vim.lsp.buf.format({async = false})
+        end
       end
     
     })
