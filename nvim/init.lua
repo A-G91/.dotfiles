@@ -43,15 +43,13 @@ require('lazy').setup({
   { 'folke/which-key.nvim',  opts = {} },
 
   {
-    'mcchrish/zenbones.nvim',
-    dependencies = {
-      'rktjmp/lush.nvim'
-    },
+    'overcache/NeoSolarized',
     priority = 1000,
     config = function()
-      vim.g.zenbones_italic_comments = false
-      vim.g.zenbones_lightness = dim
-      vim.cmd.colorscheme 'zenbones'
+      vim.g.neosolarized_bold = 0
+      vim.g.neosolarized_underline = 0
+      vim.g.neosolarized_italic = 0
+      vim.cmd.colorscheme 'NeoSolarized'
     end,
   },
 
@@ -62,7 +60,6 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'zenbones',
         component_separators = '|',
         section_separators = '',
       },
