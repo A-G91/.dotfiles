@@ -43,13 +43,13 @@ require('lazy').setup({
   { 'folke/which-key.nvim',  opts = {} },
 
   {
-    'overcache/NeoSolarized',
+    'ellisonleao/gruvbox.nvim',
     priority = 1000,
     config = function()
       vim.g.neosolarized_bold = 0
       vim.g.neosolarized_underline = 0
       vim.g.neosolarized_italic = 0
-      vim.cmd.colorscheme 'NeoSolarized'
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
 
@@ -110,9 +110,6 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 }, {})
-
--- Use light variant of theme installed
-vim.opt.background="light"
 
 -- Set highlight on search
 vim.o.hlsearch = false
