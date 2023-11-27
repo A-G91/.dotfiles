@@ -43,13 +43,10 @@ require('lazy').setup({
   { 'folke/which-key.nvim',  opts = {} },
 
   {
-    'ellisonleao/gruvbox.nvim',
+    "felipeagc/fleet-theme-nvim",
     priority = 1000,
     config = function()
-      vim.g.neosolarized_bold = 0
-      vim.g.neosolarized_underline = 0
-      vim.g.neosolarized_italic = 0
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'fleet'
     end,
   },
 
