@@ -1,0 +1,16 @@
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
+
+[font]
+size = 25
+
+[font.normal]
+family = "Zed Mono"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 4
+y = 4

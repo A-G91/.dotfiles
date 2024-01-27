@@ -43,10 +43,10 @@ require('lazy').setup({
   { 'folke/which-key.nvim',  opts = {} },
 
   {
-    "aktersnurra/no-clown-fiesta.nvim",
+    "morhetz/gruvbox",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'no-clown-fiesta'
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
 
