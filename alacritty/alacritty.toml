@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-size = 25
+size = 18
 
 [font.normal]
 family = "Zed Mono"
