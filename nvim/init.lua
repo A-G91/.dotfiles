@@ -62,6 +62,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -721,7 +726,7 @@ require("lazy").setup({
 
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc" },
+				ensure_installed = { "bash", "go", "html", "lua", "markdown", "vim", "vimdoc" },
 				-- Autoinstall languages that are not installed
 				auto_install = true,
 				highlight = { enable = true },
