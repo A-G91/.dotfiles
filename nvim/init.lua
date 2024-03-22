@@ -245,37 +245,20 @@ require("lazy").setup({
 			-- { 'nvim-tree/nvim-web-devicons' }
 		},
 		config = function()
-			-- Telescope is a fuzzy finder that comes with a lot of different things that
-			-- it can fuzzy find! It's more than just a "file finder", it can search
-			-- many different aspects of Neovim, your workspace, LSP, and more!
-			--
-			-- The easiest way to use telescope, is to start by doing something like:
-			--  :Telescope help_tags
-			--
-			-- After running this command, a window will open up and you're able to
-			-- type in the prompt window. You'll see a list of help_tags options and
-			-- a corresponding preview of the help.
-			--
-			-- Two important keymaps to use while in telescope are:
-			--  - Insert mode: <c-/>
-			--  - Normal mode: ?
-			--
-			-- This opens a window that shows you all of the keymaps for the current
-			-- telescope picker. This is really useful to discover what Telescope can
-			-- do as well as how to actually do it!
+			local actions = require("telescope.actions")
 
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
 			require("telescope").setup({
-				-- You can put your default mappings / updates / etc. in here
-				--  All the info you're looking for is in `:help telescope.setup()`
-				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
-				-- pickers = {}
+				defaults = {
+					mappings = {
+						i = {
+							["<C-e>"] = actions.select_vertical,
+							["<C-u>"] = false,
+							["<C-d>"] = false,
+						},
+					},
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
@@ -384,6 +367,10 @@ require("lazy").setup({
 					--  This is where a variable was first declared, or where a function is defined, etc.
 					--  To jump back, press <C-T>.
 					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+					local builtin = require("telescope.builtin")
+					map("<C-d>", function()
+						builtin.lsp_definitions({ jump_type = "vsplit" })
+					end, "[G]oto [D]efinition")
 
 					-- Find references for the word under your cursor.
 					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
@@ -666,12 +653,37 @@ require("lazy").setup({
 		-- change the command in the config to whatever the name of that colorscheme is
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
-		"p00f/alabaster.nvim",
+		"ellisonleao/gruvbox.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- Load the colorscheme here
-			vim.cmd.colorscheme("alabaster")
+			require("gruvbox").setup({
+				terminal_colors = true,
+				undercurl = true,
+				underline = true,
+				bold = true,
+				italic = {
+					strings = false,
+					emphasis = false,
+					comments = false,
+					operators = false,
+					folds = false,
+				},
+				strikethrough = true,
+				invert_selection = false,
+				invert_signs = false,
+				invert_tabline = false,
+				invert_intend_guides = false,
+				inverse = true,
+				contrast = "",
+				palette_overrides = {},
+				overrides = {},
+				dim_inactive = false,
+				transparent_mode = false,
+			})
+			vim.o.background = "light"
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 
