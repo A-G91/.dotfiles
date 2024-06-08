@@ -232,11 +232,6 @@ require("lazy").setup({
 				end,
 			},
 			{ "nvim-telescope/telescope-ui-select.nvim" },
-
-			-- Useful for getting pretty icons, but requires special font.
-			--  If you already have a Nerd Font, or terminal set up with fallback fonts
-			--  you can enable this
-			-- { 'nvim-tree/nvim-web-devicons' }
 		},
 		config = function()
 			local actions = require("telescope.actions")
