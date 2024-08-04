@@ -1,16 +1,27 @@
-import = [
-    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
-]
-
 [font]
 size = 18
 
 [font.normal]
-family = "Zed Mono"
+family = "Iosevka Nerd Font"
+style = "Regular"
+[font.bold]
+family = "Iosevka Nerd Font"
+style = "Regular"
+[font.italic]
+family = "Iosevka Nerd Font"
+style = "Regular"
+[font.bold_italic]
+family = "Iosevka Nerd Font"
+style = "Regular"
 
 [window]
 decorations = "none"
 
 [window.padding]
-x = 4
-y = 4
+x = 2
+y = 2
+
+[env]
+TERM = "xterm-256color"
+
+

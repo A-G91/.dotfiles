@@ -67,6 +67,7 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.opt.termguicolors = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -187,23 +188,6 @@ require("lazy").setup({
 	-- Then, because we use the `config` key, the configuration only runs
 	-- after the plugin has been loaded:
 	--  config = function() ... end
-
-	{ -- Useful plugin to show you pending keybinds.
-		"folke/which-key.nvim",
-		event = "VeryLazy", -- Sets the loading event to 'VeryLazy'
-		config = function() -- This is the function that runs, AFTER loading
-			require("which-key").setup()
-
-			-- Document existing key chains
-			require("which-key").register({
-				["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-				["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
-				["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
-				["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
-				["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
-			})
-		end,
-	},
 
 	-- NOTE: Plugins can specify dependencies.
 	--
@@ -586,26 +570,14 @@ require("lazy").setup({
 	},
 
 	{
-		"rebelot/kanagawa.nvim",
+		"shaunsingh/nord.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- Default options:
-			require("kanagawa").setup({
-				compile = false, -- enable compiling the colorscheme
-				undercurl = false, -- enable undercurls
-				commentStyle = { italic = false },
-				functionStyle = {},
-				keywordStyle = { italic = false },
-				statementStyle = { bold = false },
-				typeStyle = {},
-				transparent = false, -- do not set background color
-				dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-				terminalColors = true, -- define vim.g.terminal_color_{0,17}
-			})
 			-- setup must be called before loading
 			vim.o.background = "dark"
-			vim.cmd.colorscheme("kanagawa-dragon")
+			vim.cmd.colorscheme("nord")
 		end,
 	},
 
