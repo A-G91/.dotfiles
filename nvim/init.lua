@@ -569,18 +569,29 @@ require("lazy").setup({
 		end,
 	},
 
+	-- {
+	-- 	"shaunsingh/nord.nvim",
+	-- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
+	-- 	priority = 1000, -- make sure to load this before all the other start plugins
+	-- 	config = function()
+	-- 		-- Default options:
+	-- 		-- setup must be called before loading
+	-- 		vim.o.background = "dark"
+	-- 		vim.cmd.colorscheme("nord")
+	-- 	end,
+	-- },
+
 	{
-		"shaunsingh/nord.nvim",
+		"ramojus/mellifluous.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- Default options:
 			-- setup must be called before loading
 			vim.o.background = "dark"
-			vim.cmd.colorscheme("nord")
+			vim.cmd.colorscheme("mellifluous")
 		end,
 	},
-
 	-- Highlight todo, notes, etc in comments
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = { signs = false } },
 
