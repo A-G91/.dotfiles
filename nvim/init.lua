@@ -71,6 +71,9 @@ vim.opt.termguicolors = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Disable zig format error parsing to prevent unwanted splits
+vim.g.zig_fmt_parse_errors = 0
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -581,17 +584,30 @@ require("lazy").setup({
 	-- 	end,
 	-- },
 
+	-- {
+	-- 	"ramojus/mellifluous.nvim",
+	-- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
+	-- 	priority = 1000, -- make sure to load this before all the other start plugins
+	-- 	config = function()
+	-- 		-- Default options:
+	-- 		-- setup must be called before loading
+	-- 		vim.o.background = "dark"
+	-- 		vim.cmd.colorscheme("mellifluous")
+	-- 	end,
+	-- },
+
 	{
-		"ramojus/mellifluous.nvim",
+		"rebelot/kanagawa.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- Default options:
 			-- setup must be called before loading
 			vim.o.background = "dark"
-			vim.cmd.colorscheme("mellifluous")
+			vim.cmd.colorscheme("kanagawa-wave")
 		end,
 	},
+
 	-- Highlight todo, notes, etc in comments
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = { signs = false } },
 
