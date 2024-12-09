@@ -31,7 +31,6 @@ vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-q>", "<C-w>h", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-w>", "<C-w>l", { noremap = true, silent = true })
 
-
 -- Harpoon keybinds --
 -- Open harpoon ui
 local harpoon_ui = require("harpoon.ui")
