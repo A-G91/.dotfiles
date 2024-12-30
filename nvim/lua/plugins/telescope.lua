@@ -31,6 +31,8 @@ return {
 				file_ignore_patterns = {
 					"env",
 					"opt",
+					"__pycache__",
+					".mypy_cache",
 				},
 				path_display = { "smart" },
 				mappings = {
