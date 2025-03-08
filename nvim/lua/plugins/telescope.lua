@@ -29,8 +29,8 @@ return {
 			defaults = {
 				fzf = {},
 				file_ignore_patterns = {
-					"env",
-					"opt",
+					"env/",
+					"opt/",
 				},
 				path_display = { "smart" },
 				mappings = {
