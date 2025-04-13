@@ -38,7 +38,7 @@ return {
           "opt/",
           "__pycache__",
         },
-        path_display = { "smart" },
+        path_display = { "absolute" },
         mappings = {
           i = {
             ["<C-e>"] = actions.select_vertical,

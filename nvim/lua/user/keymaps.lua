@@ -30,53 +30,56 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-q>", "<C-w>h", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-w>", "<C-w>l", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>r", ":wincmd r<CR>",
+  { noremap = true, silent = true, desc = "Rotate windows clockwise" })
+
 
 -- Harpoon keybinds --
 -- Open harpoon ui
 local harpoon_ui = require("harpoon.ui")
 local harpoon_mark = require("harpoon.mark")
 vim.keymap.set("n", "<leader>ho", function()
-	harpoon_ui.toggle_quick_menu()
+  harpoon_ui.toggle_quick_menu()
 end)
 -- Remove all files from harpoon
 vim.keymap.set("n", "<leader>hc", function()
-	harpoon_mark.clear_all()
+  harpoon_mark.clear_all()
 end)
 
 -- Add current file to harpoon
 vim.keymap.set("n", "<C-1>", function()
-	harpoon_mark.set_current_at(1)
+  harpoon_mark.set_current_at(1)
 end)
 vim.keymap.set("n", "<C-2>", function()
-	harpoon_mark.set_current_at(2)
+  harpoon_mark.set_current_at(2)
 end)
 vim.keymap.set("n", "<C-3>", function()
-	harpoon_mark.set_current_at(3)
+  harpoon_mark.set_current_at(3)
 end)
 vim.keymap.set("n", "<C-4>", function()
-	harpoon_mark.set_current_at(4)
+  harpoon_mark.set_current_at(4)
 end)
 vim.keymap.set("n", "<C-5>", function()
-	harpoon_mark.set_current_at(5)
+  harpoon_mark.set_current_at(5)
 end)
 
 -- Quickly jump to harpooned files
 vim.keymap.set("n", "11", function()
-	harpoon_ui.nav_file(1)
+  harpoon_ui.nav_file(1)
 end)
 
 vim.keymap.set("n", "22", function()
-	harpoon_ui.nav_file(2)
+  harpoon_ui.nav_file(2)
 end)
 
 vim.keymap.set("n", "33", function()
-	harpoon_ui.nav_file(3)
+  harpoon_ui.nav_file(3)
 end)
 
 vim.keymap.set("n", "44", function()
-	harpoon_ui.nav_file(4)
+  harpoon_ui.nav_file(4)
 end)
 
 vim.keymap.set("n", "55", function()
-	harpoon_ui.nav_file(5)
+  harpoon_ui.nav_file(5)
 end)
