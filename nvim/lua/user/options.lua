@@ -2,9 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Enable line numbers - no relative
+-- Enable line numbers 
 vim.opt.nu = true
-vim.opt.rnu = false
+vim.opt.rnu = true
 
 -- Disable showing the mode below the statusline
 vim.opt.showmode = false
