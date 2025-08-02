@@ -1,4 +1,5 @@
 require("user.lsp.python")
+require("user.lsp.golang")
 
 
 -- lsp keymaps
