@@ -1,0 +1,22 @@
+{
+    "editor.fontSize": 17,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "MonaspiceNe Nerd Font",
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderLineHighlight": "gutter",
+    "workbench.statusBar.visible": false,
+    "workbench.editor.showTabs": "none",
+    "zenMode.showTabs": "none",
+    "workbench.navigationControl.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "window.commandCenter": false,
+    "workbench.editor.editorActionsLocation": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "diffEditor.codeLens": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
+}
