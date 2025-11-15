@@ -6,7 +6,6 @@ theme = GruvboxDark
 cursor-style-blink = false
 
 
-font-style-bold = false
 font-style-italic = false
 font-style-bold-italic = false
 
