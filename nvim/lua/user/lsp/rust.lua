@@ -10,7 +10,5 @@ vim.lsp.config['rust_analyzer'] = {
   capabilities = capabilities,
 }
 
-
-
 vim.lsp.enable('rust_analyzer')
 
