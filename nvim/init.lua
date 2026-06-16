@@ -1,1 +1,10 @@
-require("user")
+require("vim._core.ui2").enable({})
+
+require("options")
+require("keymaps")
+require("commands")
+require("picker")
+require("completion")
+require("format")
+require("colorscheme")
+require("lsp")
