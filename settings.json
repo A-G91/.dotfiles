@@ -1,22 +1,68 @@
-{
-    "editor.fontSize": 17,
-    "editor.formatOnSave": true,
-    "editor.fontFamily": "MonaspiceNe Nerd Font",
-    "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.guides.highlightActiveBracketPair": false,
-    "editor.guides.highlightActiveIndentation": false,
-    "breadcrumbs.enabled": false,
-    "editor.renderLineHighlight": "gutter",
-    "workbench.statusBar.visible": false,
-    "workbench.editor.showTabs": "none",
-    "zenMode.showTabs": "none",
-    "workbench.navigationControl.enabled": false,
-    "chat.commandCenter.enabled": false,
-    "window.commandCenter": false,
-    "workbench.editor.editorActionsLocation": "hidden",
-    "workbench.layoutControl.enabled": false,
-    "diffEditor.codeLens": true,
-    "workbench.secondarySideBar.defaultVisibility": "hidden"
+ {
+  // ── Appearance ───────────────────────────────────────────────
+  "workbench.colorTheme": "Everforest Pro Dark Vibrant",
+  "editor.fontFamily": "Comic Mono",
+  "editor.fontSize": 16,
+  "editor.cursorBlinking": "solid",
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.folding": false,
+  "editor.guides.indentation": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "breadcrumbs.enabled": false,
+  // ── Workbench / UI Layout ────────────────────────────────────
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": "single",
+  "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "window.commandCenter": false,
+  "update.showReleaseNotes": false,
+  // ── Editor Behavior ──────────────────────────────────────────
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "editor.hover.enabled": "onKeyboardModifier",
+  "editor.stickyScroll.enabled": false,
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "diffEditor.codeLens": true,
+  // ── Vim ──────────────────────────────────────────────────────
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.handleKeys": {
+    "<C-n>": false
+  },
+  // ── Git ──────────────────────────────────────────────────────
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+  // ── Python ───────────────────────────────────────────────────
+  "python.defaultInterpreterPath": "${workspaceFolder}/.env/bin/python",
+  "python.languageServer": "Default",
+  "python.pyrefly.typeCheckingMode": "strict",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  },
+  // ── AI / Copilot ─────────────────────────────────────────────
+  "chat.mcp.gallery.enabled": true,
+  "github.copilot.chat.customAgents.showOrganizationAndEnterpriseAgents": true,
+  "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  // ── Security ─────────────────────────────────────────────────
+  "security.workspace.trust.untrustedFiles": "open",
+  // ── Extensions ───────────────────────────────────────────────
+  "errorLens.followCursor": "activeLine"
 }
