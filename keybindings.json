@@ -1,0 +1,204 @@
+ [
+    {
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "key": "cmd+d",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.deleteLines",
+        "key": "cmd+d",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "command": "-editor.action.deleteLines",
+        "key": "shift+cmd+k",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "command": "workbench.action.openEditorAtIndex1",
+        "key": "cmd+1"
+    },
+    {
+        "command": "workbench.action.openEditorAtIndex2",
+        "key": "cmd+2"
+    },
+    {
+        "command": "workbench.action.openEditorAtIndex3",
+        "key": "cmd+3"
+    },
+    {
+        "command": "workbench.action.openEditorAtIndex4",
+        "key": "cmd+4"
+    },
+    {
+        "command": "workbench.action.openEditorAtIndex5",
+        "key": "cmd+5"
+    },
+    {
+        "command": "workbench.action.openEditorAtIndex6",
+        "key": "cmd+6"
+    },
+    {
+        "command": "-workbench.action.focusSideBar",
+        "key": "cmd+0"
+    },
+    {
+        "command": "editor.action.fontZoomReset",
+        "key": "cmd+0"
+    },
+    {
+        "command": "editor.action.fontZoomOut",
+        "key": "cmd+-"
+    },
+    {
+        "command": "editor.action.fontZoomIn",
+        "key": "cmd+="
+    },
+    {
+        "command": "actions.find",
+        "key": "/",
+        "when": "vim.mode == 'Normal' && (editorFocus || editorIsOpen)"
+    },
+    // Navigate
+    {
+        "command": "workbench.action.navigateLeft",
+        "key": "ctrl-,",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && !inQuickOpen"
+    },
+    {
+        "command": "workbench.action.navigateRight",
+        "key": "ctrl-.",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && !inQuickOpen"
+    },
+    {
+        "command": "workbench.action.navigateLeft",
+        "key": "ctrl-h",
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
+    },
+    {
+        "command": "workbench.action.navigateRight",
+        "key": "ctrl-l",
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
+    },
+    {
+        "command": "workbench.action.navigateUp",
+        "key": "ctrl-k",
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
+    },
+    {
+        "command": "workbench.action.navigateDown",
+        "key": "ctrl-j",
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
+    },
+    {
+        "args": {
+            "commands": [
+                "cancelRenameInput",
+                "closeFindWidget",
+                "closeMarkersNavigation",
+                "closeParameterHints",
+                "editor.action.hideHover",
+                "hideSuggestWidget",
+                "notification.clear",
+                "notifications.hideList",
+                "workbench.action.closeAuxiliaryBar",
+                "workbench.action.closePanel",
+                "workbench.action.closeQuickOpen",
+                "workbench.action.closeSidebar",
+                "workbench.action.focusActiveEditorGroup",
+                "extension.vim_escape"
+            ]
+        },
+        "command": "runCommands",
+        "key": "ctrl+x",
+        "when": "vim.mode == 'Normal' || vim.mode == 'Visual'"
+    },
+    // Code navigation
+    {
+        "command": "workbench.action.quickOpen",
+        "key": "space f f",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "command": "workbench.action.alternativeAcceptSelectedQuickOpenItem",
+        "key": "ctrl+e",
+        "when": "inQuickOpen"
+    },
+    {
+        "command": "editor.action.revealDefinition",
+        "key": "ctrl+d",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "command": "editor.action.revealDefinitionAside",
+        "key": "ctrl+e",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "command": "workbench.action.navigateBack",
+        "key": "ctrl+o",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "command": "workbench.action.navigateForward",
+        "key": "ctrl+i",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "args": {
+            "commands": [
+                // Select word under cursor
+                "editor.action.addSelectionToNextFindMatch",
+                // Now run your Quick Text Search with the selected word
+                {
+                    "args": {
+                        "matchWholeWord": true,
+                        "query": "${selectedText}",
+                        "triggerSearch": true
+                    },
+                    "command": "workbench.action.quickTextSearch"
+                }
+            ]
+        },
+        "command": "runCommands",
+        "key": "ctrl+f",
+        "when": "editorTextFocus && !inQuickOpen"
+    },
+    {
+        "command": "workbench.action.problems.focus",
+        "key": "space s d",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "command": "editor.action.marker.nextInFiles",
+        "key": "ctrl+n",
+        "when": "view.workbench.panel.markers.view.visible"
+    },
+    {
+        "command": "editor.action.marker.prevInFiles",
+        "key": "ctrl+p",
+        "when": "view.workbench.panel.markers.view.visible"
+    },
+    // Save 
+    {
+        "command": "workbench.action.files.save",
+        "key": "space w",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    // LSP
+    {
+        "command": "editor.action.showHover",
+        "key": "shift-k",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "command": "editor.action.codeAction",
+        "key": "space c a",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.showAllEditors",
+        "key": "space space",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    }
+]
